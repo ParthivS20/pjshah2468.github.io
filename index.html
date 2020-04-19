@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+	<html>
+		<head>
+			<meta charset="UTF-8">
+            <title>Calculator</title>
+            <link rel="stylesheet" href="styles.css" type="text/css">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		</head>
+		<body id="body">
+            <table> 
+                <tr style="margin-bottom: 10px;"> 
+                    <td colspan="3"><input type="text" id="display" value=" "></td> 
+                    <td><input type="button" value="⌫ " id="backSpace" class="op" onclick="backSpace()"></td> 
+                </tr> 
+                <tr style="margin-bottom: 10px;"> 
+                    <td><input type="button" value="C" id="clear" onclick="clr()"></td> 
+                    <td><input type="button" value="(" class="par" onclick="btnIN('(')"></td> 
+                    <td><input type="button" value=")" class="par"onclick="btnIN(')')"></td> 
+                    <td><input type="button" value="÷" class="op" onclick="btnIN('/')"></td> 
+                </tr> 
+                <tr style="margin-bottom: 10px;"> 
+                    <td><input type="button" value="7" onclick="btnIN('7')"></td> 
+                    <td><input type="button" value="8" onclick="btnIN('8')" ></td> 
+                    <td><input type="button" value="9" onclick="btnIN('9')"></td> 
+                    <td><input type="button" value="×" class="op" onclick="btnIN('*')"></td> 
+                </tr> 
+                <tr style="margin-bottom: 10px;"> 
+                    <td><input type="button" value="4" onclick="btnIN('4')"></td> 
+                    <td><input type="button" value="5" onclick="btnIN('5')"></td> 
+                    <td><input type="button" value="6" onclick="btnIN('6')"></td> 
+                    <td><input type="button" value="-" class="op" onclick="btnIN('-')"></td> 
+                </tr> 
+                <tr style="margin-bottom: 10px;"> 
+                    <td><input type="button" value="1" onclick="btnIN('1')"></td> 
+                    <td><input type="button" value="2" onclick="btnIN('2')"></td> 
+                    <td><input type="button" value="3" onclick="btnIN('3')"></td> 
+                    <td><input type="button" value="+" class="op" onclick="btnIN('+')"></td> 
+                </tr> 
+                <tr style="margin-bottom: 20px;"> 
+                    <td><input type="button" value="(-)" onclick="btnIN('(-')" style="margin-bottom: 20px;"></td> 
+                    <td><input type="button" value="0" onclick="btnIN('0')" style="margin-bottom: 20px;"></td> 
+                    <td><input type="button" value="." onclick="btnIN('.')" style="margin-bottom: 20px;"></td> 
+                    <td><input type="button" value="=" class="op" id="enter" onclick="solve()" style="margin-bottom: 20px;"></td> 
+                </tr> 
+            </table>
+            <fieldset>
+                <label>History: </label>
+                <input type="button" value="Clear History" id="clearHistory" onclick="clearHistory()">
+                <p id="noH">No History</p>
+                <ul id="history"></ul>
+            </fieldset>
+        </body>
+        <script src="script.js" type="text/javascript"></script>
+    </html>
