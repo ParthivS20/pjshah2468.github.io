@@ -48,6 +48,7 @@
     input[id="backSpace"] {
         font-size: large;
         height: 35px;
+        width: 35px;
         background-color: rgb(255, 255, 255);
         color: blue;
         margin-left: -5px;
